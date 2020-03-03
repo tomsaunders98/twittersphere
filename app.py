@@ -8,6 +8,8 @@ from dash.dependencies import Input, Output
 
 
 app = dash.Dash(__name__)
+server = app.server
+
 people = pd.read_csv("BNOCSFINAL1.csv")
 
 accountlist = people["name"].unique().tolist()
@@ -209,4 +211,4 @@ def update_graph(xaxis_type, yaxis_type,datatype, num_dropdown,input_1,my_multi_
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server()
