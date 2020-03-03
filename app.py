@@ -5,11 +5,13 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import flask
+import os
+from random import randint
 
 
 server = flask.Flask(__name__)
 app = dash.Dash(__name__, server=server)
-
+server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
 
 people = pd.read_csv("BNOCSFINAL1.csv")
 
