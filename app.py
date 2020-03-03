@@ -4,12 +4,13 @@ import pandas as pd
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
+import flask
 
 
+server = flask.Flask(__name__)
+app = dash.Dash(__name__, server=server)
 
-app = dash.Dash(__name__)
-server = app.server
-#maincsv
+
 people = pd.read_csv("BNOCSFINAL1.csv")
 
 accountlist = people["name"].unique().tolist()
