@@ -1,23 +1,19 @@
 # -*- coding: utf-8 -*-
-import os
-from random import randint
 
-import plotly.plotly as py
-from plotly.graph_objs import *
 
-import flask
 import dash
-from dash.dependencies import Input, Output, State, Event
+import pandas as pd
 import dash_core_components as dcc
 import dash_html_components as html
-import pandas as pd
+from dash.dependencies import Input, Output
 
 
 
 
-server = flask.Flask(__name__)
+
 app = dash.Dash(__name__, server=server)
-server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
+server = app.server
+
 
 people = pd.read_csv("BNOCSFINAL1.csv")
 
@@ -220,4 +216,4 @@ def update_graph(xaxis_type, yaxis_type,datatype, num_dropdown,input_1,my_multi_
 
 
 if __name__ == '__main__':
-    app.server.run(debug=True, threaded=True)
+    app.run_server(debug=True)
