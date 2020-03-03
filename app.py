@@ -2,12 +2,15 @@
 import os
 from random import randint
 
+import plotly.plotly as py
+from plotly.graph_objs import *
+
 import flask
 import dash
-import pandas as pd
+from dash.dependencies import Input, Output, State, Event
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output
+import pandas as pd
 
 
 
@@ -217,4 +220,4 @@ def update_graph(xaxis_type, yaxis_type,datatype, num_dropdown,input_1,my_multi_
 
 
 if __name__ == '__main__':
-    app.server.run(threaded=True)
+    app.server.run(debug=True, threaded=True)
