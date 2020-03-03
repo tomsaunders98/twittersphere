@@ -8,8 +8,13 @@ Data Visualistion Code
 
 #### Requirements
 * Python 3.7
-* Plotly Dash
-* Pandas
+* gunicorn
+* plotly
+* dash
+* dash-renderer
+* dash-html-components
+* dash-core-components
+* pandas
 
 - - -
 
@@ -25,6 +30,8 @@ Data Visualistion Code
 	* This contains all the information on each user's tweets.
 * App.py
 	* Code for the Bubble Chart
+* Procfile, requirements.txt, runtime.txt
+	* Heroku stuff
 
 - - -
 
