@@ -1,0 +1,18 @@
+.selectormain {
+	display: flex;
+	flex-direction: row;
+	margin-left: 1%;
+	margin-bottom: 20px;
+}
+.dropdown-select-outer > div > p {
+	color: #999999;
+	
+}
+.selector{
+	width: 16%;
+	margin-right: 20px;
+}
+.selector > input[type="text"] {
+	width: 100%;
+
+}
