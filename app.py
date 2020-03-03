@@ -216,4 +216,4 @@ def update_graph(xaxis_type, yaxis_type,datatype, num_dropdown,input_1,my_multi_
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server()
