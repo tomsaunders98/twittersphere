@@ -9,7 +9,7 @@ from dash.dependencies import Input, Output
 
 app = dash.Dash(__name__)
 server = app.server
-
+#maincsv
 people = pd.read_csv("BNOCSFINAL1.csv")
 
 accountlist = people["name"].unique().tolist()
