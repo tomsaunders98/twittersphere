@@ -11,7 +11,7 @@ from dash.dependencies import Input, Output
 
 
 
-app = dash.Dash(__name__, server=server)
+app = dash.Dash(__name__)
 server = app.server
 
 
